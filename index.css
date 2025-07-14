@@ -1,0 +1,954 @@
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #060a13;
+  --blue-bg: #1995dd;
+  --toggle-circle: #eaf6fa;
+  --icon-color: #c0cad8;
+    --gold: #ffbc2d;
+  --light-gold: #FFECB3; /* ذهبي فاتح */
+    --toggle-bg: #2b3648;
+    --light-dark:#060a13bb;
+    --dark:rgba(10, 93, 131, 0.993);
+    --dark-card:rgb(30 41 59 );
+    --light:rgba(233, 221, 221, 0.801);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+body{
+    background-color: var(--bg-dark);
+}
+header{
+  position: fixed;
+  top: 0;
+  border-bottom-style: solid;
+  width: 100%;
+  border-color: #1995dd7a;
+  border-width: 4px;
+  z-index: 100;
+  background-color: var(--bg-dark);
+  max-height: 7em;
+  padding: 10px 60px;
+}
+nav{
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+   
+}
+
+
+.toggle-container {
+  position: relative;
+ 
+}
+
+.toggle-switch {
+  
+ max-height: 58px;
+  background-color: var(--toggle-bg);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  color: var(--icon-color);
+}
+
+.toggle-switch::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-color: var(--toggle-circle);
+  border-radius: 50%;
+  position: absolute;
+
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.icon {
+  z-index: 2;
+  font-size: 15px;
+}
+
+/* إخفاء الـ checkbox */
+#toggle {
+  display: none;
+}
+
+
+
+.toggle-switch {
+  width: 80px; /* بدلاً من 110px */
+  height: 40px; /* ممكن تصغر الارتفاع كمان لو حبيت */
+  padding: 0 4px ;
+}
+
+.toggle-switch::after {
+  width: 38px;
+  height: 38px;
+  top: 1px;
+  left:0px;
+}
+
+#toggle:checked + .toggle-switch::after {
+  transform: translateX(44px); /* مناسبة للعرض الجديد */
+}
+
+.icon {
+  font-size: 16px;
+  color: #060a13ad;
+  
+}
+
+div.nav-logo{
+    display: flex;
+    margin-left: 2em;
+    margin-top: 1em;
+    align-items: center;
+}
+div.toggle-container{
+    margin-left: 1em;
+}
+div.log{
+      margin-right:  2em;
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+}
+div.log a{
+    text-decoration: none;
+    
+}
+ .login ,.signup ,.bx-search{
+   padding:0.5em 1em;
+   font-weight: 500;
+   border-radius: 8px;
+ 
+}
+.signup{
+    color: var(--bg-light);
+    background-color: var(--blue-bg);
+    display: flex;
+    align-items: center;
+}
+
+.login {
+  font-family: 'Cairo', sans-serif; /* خط عربي أنيق */
+  font-size: 18px;
+  text-decoration: none;
+  
+}
+
+
+.white-text {
+  
+  display: inline-flex;
+  align-items: center; /* عشان الأيقونة تطلع بجانب النص */
+}
+
+.login-icon {
+  margin-right: 5px;
+}
+
+.span {
+  color: gold; /* الذهبي */
+}
+
+.white-text {
+  color: white;
+  margin-left: 2px;
+}
+
+i.bx-search{
+    font-size:1.3em;
+    cursor: pointer;
+    color: var(--bg-light);
+    z-index: 54;
+}
+
+.log>div{
+display: flex;
+color: var(--bg-light);
+align-items: center;
+overflow: hidden;
+}
+.search-tex{
+position: relative;
+right: -180px;
+
+}
+
+
+
+
+
+
+/* ############### */
+
+.main-header{
+ 
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--bg-light);
+  
+}
+.main-header img{
+  width: 30%;
+}
+.main-header div{
+  text-align: center;
+  margin-bottom: 12em;
+  
+}
+.main-header h1{
+  font-size: 2em;
+    font-family: "Dubai", "Tajawal", sans-serif;
+  
+  
+}
+.main-header h1 span{
+  font-size: 2em;
+  color: var(--blue-bg);
+  font-family: "cairo", sans-serif;
+  font-weight: 900;
+ 
+
+
+}
+.main-header p{
+  font-weight: 900;
+  font-size: 1.21em;
+    font-family: "Dubai", "Tajawal", sans-serif;
+}
+
+@media (max-width:1200px) and (min-width:800px) {
+.main-header img{
+
+  width: 50%;
+}
+}
+@media (max-width:899px) {
+
+  .main-header img{
+  width: 90%;
+  margin:0 10px;
+ 
+}
+
+.main-header{
+  flex-direction: column;
+
+}
+.main-header {
+  margin-top: 1em;
+}
+.main-header h1{
+  font-size: 1.5em;
+}
+div.log{
+  display: none;
+}
+
+}
+
+.telegram-logo{
+ position: fixed;
+ bottom: 15px;
+ left: 20px;
+ width: 60px;
+ height:60px;
+ 
+ color: var(--bg-light);
+ background-color:var(--blue-bg);
+ padding: 15px;
+ border-radius: 50%;
+ z-index: 10;;
+}
+
+.teacher{
+  margin-top: 5em;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+ h2{
+  color:var(--bg-light);
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  
+
+}
+ h2 span{
+  color: var(--blue-bg);
+  font-size: 1.5em;
+}
+.h-full{
+  width: 30%;
+  margin-bottom: 4em;
+}
+.classification{
+  background-color:rgb(100 116 139 );
+  padding: 10px 30px;
+  border-radius: 0.5em;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  width: fit-content;
+  justify-content: center;
+ gap: 10px;
+}
+
+
+.styled-select {
+  padding: 5px 10px;
+  border: 1px solid var(--light-dark);
+  border-radius: 8px;
+  background-color:var(--light-dark);
+  color: var(--bg-light);
+  font-size: 16px;
+  margin: 5px;
+  width: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width:799px) {
+
+ .teacher h2{
+  text-align: center;
+ }
+ .h-full{
+  width: 80%;
+ }
+ 
+}
+.appearTeacher{
+  margin: 5em 2em;
+}
+.appearTeacher .container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+.appearTeacher .card{
+  
+  width: 40%;
+  
+}
+.card img{
+  width: 100%;
+  border-top-left-radius: 1em;
+   border-top-right-radius: 1em;
+}
+.text-card{
+  width: 90%;
+  margin: auto;
+  position: relative;
+  top:-35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3em 0.5em 4em;
+  text-align: center;
+  border-radius: 0.8em;
+  background-color: rgb(100 116 139 );
+  z-index: 5;
+}
+.text-card h3{
+  color: var(--bg-light);
+  font-size: 2.2em;
+  font-weight: 900;
+
+}
+.text-card p{
+  color: var(--bg-light);
+  font-size: 1.8em;
+  font-weight: 500;
+  line-height: 10px;
+
+  
+}
+.appearTeacher button ,.suggestion-courses button{
+  margin-top: 2em;
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: var(--bg-light);
+  background-color: rgb(244 63 94 );
+  display: flex;
+  justify-self: center;
+  border-style: none;
+  font-weight: 600;
+  font-size: 1.05em;
+  text-align: center;
+}
+
+
+@media (max-width:799px) {
+
+
+ .appearTeacher .card{
+  
+  width: 100%;
+  
+}
+}
+
+@media (max-width:1300px) and (min-width:799px) {
+
+
+ .appearTeacher .card{
+  
+  width: 45%;
+  
+}
+}
+
+@media (min-width:1300px) {
+
+
+ .appearTeacher .card{
+  
+  width: 30%;
+  
+}
+}
+
+/* ############### */
+
+
+.suggestion-courses{
+  margin: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.suggestion-courses .p{
+  color: var(--bg-light);
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 5em;
+}
+.suggestion-courses .p::after{
+  content:"🌞";
+  direction: rtl;
+}
+
+.suggestion-courses .container {
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+.suggestion-courses .card{
+  background-color: var(--dark-card);
+  width: 40%;
+  margin: 1em 0;
+  border-radius: 1em;
+}
+.suggestion-courses .upper-side{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 1em 0.5em 1.3em 0.5em;
+
+}
+.suggestion-courses .upper-side .text{
+  width: 78%;
+}
+.upper-side .text{
+  padding: 0.2em;
+
+}
+.upper-side .text h3{
+  font-weight: 700;
+  font-size: 1.5em;
+  color: var(--bg-light);
+}
+.upper-side .text p{
+  font-weight: 500;
+  font-size: 0.9em;
+  color: var(--light);
+}
+ hr{
+  margin: 5px;
+ height: 0.09px;
+ background-color: var(--bg-light);
+ border-style: none;
+}
+.upper-side hr{
+  margin: 5px;
+  height: 2px;
+}
+.upper-side .button a{
+  text-decoration: none;
+  color: var(--bg-light);
+  border:2px solid rgb(61, 179, 149);
+  padding: 3px 8px;
+  border-radius: 1em;
+  margin: 20px 0;
+}
+
+.upper-side .button p {
+  
+  text-decoration: none;
+  color: var(--bg-light);
+  background-image: linear-gradient(to right , rgb(244 63 94 ),  rgb(184, 20, 175));
+  padding: 3px 8px;
+  border-radius: 1em;
+}
+.lower-side .free{
+    color: var(--bg-light);
+  background-image: linear-gradient(to right , rgb(244 63 94 ),  rgb(184, 20, 175));
+  padding: 3px 8px;
+  border-radius: 1em;
+  height: fit-content;
+  display: flex;
+  margin: auto 0;
+}
+.lower-side .date p{
+  color: var(--light);
+  display: flex;
+  align-items: center;
+}
+.lower-side .date p i{
+  margin-right: 5px;
+}
+
+
+.suggestion-courses .upper-side .button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.suggestion-courses .lower-side{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+   margin: 1em 0.5em 1.3em 0.5em;
+
+}
+
+
+
+@media (min-width:900px)and (max-width:1300px) {
+
+ 
+.suggestion-courses .card{
+  
+  width: 60%;
+  
+}
+ 
+}
+
+
+@media (max-width:900px)and (min-width:799px) {
+
+.suggestion-courses .card{
+
+  width: 80%;
+  
+}
+ 
+}
+
+@media (max-width:799px) {
+
+
+  .suggestion-courses .container{
+     
+      width: 90vw;
+  }
+.suggestion-courses .card{
+
+  width: 100%;
+
+  
+}
+.suggestion-courses .upper-side{
+  flex-direction: column;
+  align-items: end;
+ 
+
+
+}
+.suggestion-courses .upper-side .text{
+ width: 100%;
+  
+
+}
+.suggestion-courses .upper-side .button{
+ width: 100%;
+  
+
+}
+
+.upper-side .button a{
+
+  padding:  1px;
+  border-radius: 0.5em;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.upper-side .button p {
+
+  padding: 1px;
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+.suggestion-courses button{
+
+ 
+  
+   width: 80vw;
+
+
+ 
+}
+}
+
+/* ###################### */
+.filter-data{
+  background-color: rgb(22, 94, 122);
+  padding: 5em 1em;
+}
+
+
+.filter-data .container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+  
+  
+}
+
+.filter-data img{
+  width: 20%;
+  margin-right: 1em;
+}
+.filter-data .text-side{
+  width: 60%;
+}
+
+.filter-data .text-side h4{
+color: var(--bg-light);
+font-size: 1em;
+font-weight: 900;
+
+}
+.filter-data .text-side p{
+color: var(--bg-light);
+
+font-size: 1.5em;
+font-weight: 600;
+background-color: var(--bg-dark);
+padding: 1em 1em;
+border-radius: 0.8em;
+border:solid white 2px;
+margin:1em 0 1em 1em;
+margin-bottom: 1em;
+
+
+}
+.filter-data .text-side a{
+
+
+text-decoration: none;
+color: var(--bg-dark);
+background-color: var(--gold);
+font-size: 1.2em;
+font-weight: 700;
+padding:0.2em 0.7em;
+border-radius: 0.4em;
+
+
+}
+
+@media (max-width:1000px){
+  .filter-data .container{
+    flex-direction: column;
+    align-items: center;
+    
+  }
+    .filter-data .container img{
+    
+      width: 40vw;
+      margin-top: 4em;
+    
+  }
+    .filter-data .text-side{
+    
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80vw;
+    
+  }
+  .filter-data .text-side p{
+font-size: 1em;
+margin-bottom: 1em;
+width: 80vw;
+
+}
+}
+/* ################## */
+
+.section-subject{
+  margin:5em 0;
+}
+.title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-subject .continer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.section-subject .card{
+   
+  padding: 1em 2em;
+  
+
+}
+.section-subject .card  h3{
+  
+  font-size: 2em;
+  font-weight: 800;
+  background-color: var(--gold);
+  margin-bottom: 1em;
+  padding: 10px 20px;
+  border-radius: 5em;
+  color: var(--bg-light);
+}
+.section-subject  .sub-container-subject{
+  background-color: var(--blue-bg);
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 1em;
+}
+.section-subject  .sub-container-subject p{
+color: var(--bg-light);
+font-size: 1.5em;
+font-weight: 600;
+text-align: center;
+margin: 1em 0;
+
+}
+.section-subject  .sub-container-subject button{
+  border:none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  background-color: var(--gold);
+  color: var(--bg-light);
+  font-weight: 600;
+}
+
+@media (min-width:1024px) {
+  .card2{
+position: relative;
+top: 4em;
+}
+.card1{
+position: relative;
+top: 8em;
+}
+
+  
+
+}
+@media (max-width:799px) {
+  .section-subject .card{
+  width:80vw;
+  text-align: center;
+}
+.section-subject .card  h3{
+  
+  font-size: 1.2em;
+
+}
+  
+}
+
+
+/* ################################ */
+
+.how-simpleast{
+  margin: 8em 0;
+}
+.how-simpleast .container{
+  display: flex;
+  flex-wrap: wrap;
+  
+  justify-content: center;
+  
+
+}
+.how-simpleast .card{
+  background-color: var(--blue-bg);
+  padding: 30px 20px;
+  margin: 10px;
+  width: 17vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 1em;
+
+}
+.how-simpleast .card h3{
+  font-size: 2em;
+  font-weight: 800;
+  color:var(--toggle-bg);
+}
+.how-simpleast .card p{
+  font-size: 1em;
+  font-weight: 600;
+  color:var(--bg-light);
+}
+
+.skip{
+  background-color:rgb(22, 94, 122);
+  padding: 40px 10px;
+  text-align: center;
+}
+.skip h6{
+  font-size: larger;
+  font-weight: 700;
+  color: var(--bg-light);
+  margin-bottom: 1.2em;
+}
+.skip a{
+  border-radius: 8px;
+ background-color: var(--gold);
+ padding: 10px 30px;
+ font-size: 1.2em;
+ text-decoration: none;
+ font-weight: 600;
+ color: var(--bg-dark);
+
+}
+
+
+@media (min-width:799px) and (max-width:1200px) {
+.how-simpleast .card{
+
+  width: 40vw;
+}
+}
+
+@media (max-width:799px) {
+.how-simpleast .card{
+
+  width: 70vw;
+}
+}
+
+
+footer{
+  margin-top: 5em;
+  background-color: rgb(22, 94, 122);
+  min-height: 50vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+footer .image{
+display: flex;
+justify-content: center;
+width: 50vw;
+}
+footer .tel{
+ 
+ background-color: var(--bg-dark);
+ color: white;
+ padding: 10px 60px;
+ margin-bottom: 2em;
+ font-size: 1.5em;
+ font-weight: 700;
+ border-radius: 10px;
+}
+.tel p{
+  
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.tel p a{
+  background-color:rgb(122, 169, 177);
+  padding: 8px 40px;
+ border-radius: 10px;
+ color: #f4f5f7;
+ font-weight: 700;
+}
+footer  .icon i{
+  font-size: 2.2em;
+  margin: 0 5px 10px;
+}
+footer >p{
+  font-size: larger;
+  font: 600;
+  color: var(--bg-light);
+  margin: 1em 0 ;
+  text-align: center;
+  margin-bottom: 5em;
+
+
+}
+
+@media (max-width:799px) {
+footer .tel{
+text-align: center;
+
+font-size: 1.2em;
+
+}
+
+.tel p{
+  
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+.tel p a{
+
+  padding: 4px 20px;
+ border-radius: 10px;
+
+ font-weight: 600;
+}
+}
+
+
+
+

@@ -950,5 +950,61 @@ font-size: 1.2em;
 }
 
 
+/* animation */
+@media (min-width:900px) {
+  .login{
+    margin-right: 1em;
+    padding: 5px 10px;
+  }
+.login:hover{
+  border-style: double;
+  border-color:var(--blue-bg);
+   transition: 0.5s ease-in-out;
+}
+.signup:hover{
+border: double var(--bg-light);
+background-color: var(--bg-dark);
+ transition: 0.5s ease-in-out;
+}
+.appearTeacher .card:hover{
+      transform: scale(1.1);
+       transition: 0.5s ease-in-out;
+}
+.appearTeacher button:hover, .suggestion-courses button:hover{
+  cursor: pointer;
+  background-color: var(--bg-light);
+  color: var(--bg-dark);
+         transition: 0.5s ease-in-out;
+  
+}
 
+.suggestion-courses .card .upper-side .button a:hover{
+transform: scale(.8);
+       transition: 0.5s ease-in-out;
+}
 
+.filter-data a:hover ,.section-subject button:hover, #btn:hover{
+    transition: 0.5s ease-in-out;
+    transform: scale(1.05);
+    cursor: pointer; 
+}
+
+footer .icon .fa-facebook:hover{
+    transition: 1s ease;
+    transform: rotate(25deg);
+    cursor: pointer; 
+    color: #1995dd;
+}
+footer .icon .fa-whatsapp:hover{
+    transition: 1s ease;
+    transform: rotate(25deg);
+    cursor: pointer; 
+    color: #19dd92;
+}
+footer .icon .fa-instagram:hover{
+    transition: 1s ease;
+    transform: rotate(25deg);
+    cursor: pointer; 
+    color: #dd8219;
+}
+}

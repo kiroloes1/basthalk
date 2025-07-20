@@ -137,16 +137,39 @@ const teachers = [
 
 let moreBtn=document.querySelector(".more-btn")
 const appearTeacher=document.querySelector(".con-appearTeacher")
+let subjectbtn=document.querySelector(".sub")
+let subject=document.querySelector(".all-subject")
+
+let menu=document.querySelector(".menu");
+let log=document.querySelector(".log")
+
+console.log((log))
+console.log((menu))
+
+
+function menuAppear() {
+  menu.classList.toggle("toggle1"); // ← هنا الصح
+  log.classList.toggle("show");     // ← لو عايز تظهر الـ log (لو فيه DropDown مثلاً)
+  console.log(3);
+}
 
 function toggle() {
-  if (appearTeacher.classList.contains("expand")) {
+  if (appearTeacher.classList.contains("expand") ||subject.classList.contains("expand")) {
     appearTeacher.classList.remove("expand");
     moreBtn.innerHTML = "عرض المزيد من الكورسات";
-  } else {
-    appearTeacher.classList.add("expand");
-    moreBtn.innerHTML = "عرض مدرسين أقل";
+   
   }
+    else{
+
+          appearTeacher.classList.add("expand");
+    moreBtn.innerHTML = "عرض مدرسين أقل";
+
+    }
+
 }
+
+
+
 
 
 let selectedGrade = "";
@@ -198,3 +221,6 @@ appearTeacher.innerHTML = container;
 
 filterTeachers();
 
+function toggleMode() {
+  document.documentElement.classList.toggle("light-mode");
+}

@@ -13,11 +13,17 @@
     --light:rgba(233, 221, 221, 0.801);
 }
 
+.light-mode{
+--bg-dark:var(var(--bg-light));
+--bg-light:var(var(--bg-dark)) ;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Cairo', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -43,6 +49,9 @@ nav{
    
 }
 
+.toggle1{
+  display:flex;
+}
 
 .toggle-container {
   position: relative;
@@ -148,6 +157,7 @@ div.log{
     margin-top: 1em;
     display: flex;
     align-items: center;
+    
 }
 div.log a{
     text-decoration: none;
@@ -157,6 +167,7 @@ div.log a{
    padding:0.5em 1em;
    font-weight: 500;
    border-radius: 8px;
+    
  
 }
 .signup{
@@ -201,6 +212,7 @@ i.bx-search{
     color: var(--bg-light);
     z-index: 54;
 }
+
 
 .log>div{
 display: flex;
@@ -285,8 +297,32 @@ right: -180px;
   font-size: 1.5em;
 }
 
-div.log{
+nav{
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.toggle-container{
   display: none;
+}
+
+ .login ,.signup ,.bx-search{
+
+   margin-left: 20px ;
+ 
+}
+div.log{
+   display: none;
+    height: 50vh;
+    border-radius: 10px;
+    background-color:rgb(9, 6, 92);
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width:100%;
+    margin: auto;
 }
 .menu{
   cursor: pointer;
@@ -362,10 +398,20 @@ div.log{
   overflow-y: hidden;
   transition: all 0.5s ease-in-out;
 }
-.expand {
-  max-height: 1000px; /* أو أكبر قيمة ممكنة تُظهر كل الكروت */
-  overflow-y: visible;
+
+.teacher .card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
 }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .styled-select {
   padding: 5px 10px;
@@ -389,7 +435,20 @@ div.log{
  .h-full{
   width: 80%;
  }
- 
+ div.log{
+   display: none;
+    height: 50vh;
+    border-radius: 10px;
+    background-color:rgb(9, 6, 92);
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width:100%;
+    margin: auto;
+    flex-direction: column-reverse;
+}
+
 }
 .appearTeacher{
   margin: 5em 2em;
@@ -399,6 +458,11 @@ div.log{
   flex-wrap: wrap;
   justify-content: space-around;
 
+}
+
+
+.login ,.signup,.bx-search{
+  margin: 10px 0;
 }
 .appearTeacher .card{
   
@@ -453,6 +517,7 @@ div.log{
 }
 
 
+
 @media (max-width:799px) {
 
 
@@ -461,11 +526,16 @@ div.log{
   width: 100%;
   
 }
+
 }
 
 @media (max-width:1300px) and (min-width:799px) {
 
 
+   .login{
+  margin: 0 1em;
+ }
+ 
  .appearTeacher .card{
   
   width: 45%;
@@ -813,8 +883,9 @@ text-align: center;
 margin: 1em 0;
 
 }
+
 .section-subject  .sub-container-subject button{
-  border:none;
+  border:solid transparent;
   padding: 0.5em 1em;
   font-size: 1em;
   border-radius: 0.5em;
@@ -822,6 +893,7 @@ margin: 1em 0;
   color: var(--bg-light);
   font-weight: 600;
 }
+
 
 @media (min-width:1180px) {
   .card2{
@@ -1140,6 +1212,13 @@ transform: scale(.8);
     cursor: pointer; 
 }
 
+.section-subject  .sub-container-subject button:hover{
+  border:none;
+background-color: transparent;
+color: var(--bg-dark);
+border: solid var(--gold); 
+
+}
 
 
 
@@ -1314,3 +1393,45 @@ button{
 }
 
 }
+
+
+.expand {
+  max-height:fit-content; /* أو أكبر قيمة ممكنة تُظهر كل الكروت */
+  overflow-y: visible;
+}
+
+
+.menu {
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.toggle1 .item-1 {
+  transform: rotate(45deg) translateY(10px);
+   transition: all 01s ease;
+}
+
+.toggle1 .item-2 {
+  opacity: 0;
+   transition: all 01s ease;
+}
+
+.toggle1 .item-3 {
+  transform: rotate(-45deg) translateY(-10px);
+   transition: all 01s ease;
+}
+
+
+
+.log.show {
+  display: flex;
+  transition: all 0.5s ease-in-out;
+}
+

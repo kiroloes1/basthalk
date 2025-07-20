@@ -34,6 +34,10 @@
 <!-- خط Dubai من CDN -->
 <link href="https://cdn.jsdelivr.net/gh/dheereshagrwal/dubai-font@master/dubai-font.css" rel="stylesheet">
 
+
+    <!-- auto animation  -->
+     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   </head>
   <body>
     <header >
@@ -48,13 +52,25 @@
             </label>
           </div>
         </div>
+
+
+
+
+
+          <div class="menu">
+              <span class="menu-item item-1"></span>
+              <span class="menu-item item-2"></span>
+              <span class="menu-item item-3"></span>
+            </div>
         <div class="log">
-          <div >
-            <p class="search-tex">ابحث في الموقع</p>
-            <i class="bx bx-search"></i>
-          </div>
           
-<a href="" class="login">
+            
+            <i class="bx bx-search"></i>
+       
+
+          
+          
+<a href="./login.html" class="login">
   <span class="span">
     دخولك  <span class="white-text">  سجل 
       <svg style="margin:0 5px; color:gold" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="1.5em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
@@ -64,7 +80,7 @@
   </span>
 </a>
 
-          <a href="" class="signup">!اعمل جساب جديد <svg style="margin:0 5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--material-symbols" width="1.5em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M5 19V5zv-.025zm0 2q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v7q0 .425-.288.713T20 13t-.712-.288T19 12V5H5v14h7q.425 0 .713.288T13 20t-.288.713T12 21zm14.175-1H16q-.425 0-.712-.288T15 19t.288-.712T16 18h3.175l-.9-.9Q18 16.825 18 16.413t.3-.713q.275-.275.7-.275t.7.275l2.6 2.6q.3.3.3.7t-.3.7l-2.6 2.6q-.275.275-.687.288T18.3 22.3q-.275-.275-.275-.7t.275-.7zM11 13v3q0 .425.288.713T12 17t.713-.288T13 16v-3h3q.425 0 .713-.288T17 12t-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7t-.712.288T11 8v3H8q-.425 0-.712.288T7 12t.288.713T8 13z"></path></svg></a>
+          <a href="./signUp.html" class="signup">!اعمل جساب جديد <svg style="margin:0 5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--material-symbols" width="1.5em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M5 19V5zv-.025zm0 2q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v7q0 .425-.288.713T20 13t-.712-.288T19 12V5H5v14h7q.425 0 .713.288T13 20t-.288.713T12 21zm14.175-1H16q-.425 0-.712-.288T15 19t.288-.712T16 18h3.175l-.9-.9Q18 16.825 18 16.413t.3-.713q.275-.275.7-.275t.7.275l2.6 2.6q.3.3.3.7t-.3.7l-2.6 2.6q-.275.275-.687.288T18.3 22.3q-.275-.275-.275-.7t.275-.7zM11 13v3q0 .425.288.713T12 17t.713-.288T13 16v-3h3q.425 0 .713-.288T17 12t-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7t-.712.288T11 8v3H8q-.425 0-.712.288T7 12t.288.713T8 13z"></path></svg></a>
          
         </div>
         
@@ -89,12 +105,12 @@
 
        
 
-          <select class="the-class styled-select" name="الصف" id="">  
-            <option value="الأول">الصف الأول الثانوي</option>
-            <option value="الثاني">الصف الثاني الثانوي</option>
-            <option value="الثالث">الصف الثالث الثانوي</option>
-          </select>
-               <select class="subject styled-select" name="اسم المدرس" id="">
+<select class="the-class styled-select" name="الصف" onchange="selectTeacher(this.value) ;filterTeachers()">
+  <option value="الصف الأول الثانوي">الصف الأول الثانوي</option>
+  <option value="الصف الثاني الثانوي">الصف الثاني الثانوي</option>
+  <option value="الصف الثالث الثانوي">الصف الثالث الثانوي</option>
+</select>
+               <select onchange="department(this.value) ;filterTeachers()" class="subject styled-select" name="اسم المدرس" id="">
             <option value="علمي">علمي</option>
             <option value="ادبي">ادبي</option>
            </select>
@@ -102,33 +118,12 @@
         </div>
 
         <div class="appearTeacher">
-          <div class="container">
-            <div class="card">
-              <img src="./image/biology/اولي ثانوي.jpg" alt="">
-              <div class="text-card"> 
-              <h3>م\ايمن احمد</h3>
-              <p>الصف الاول الثانوي</p>
-              </div>
-            </div>
+          <div class="container con-appearTeacher">
+         
 
-                        <div class="card">
-              <img src="./image/biology/تانيه ثانوي.jpg" alt="">
-              <div class="text-card"> 
- <h3>م\ايمن احمد</h3>
-              <p>الصف الثاني الثانوي</p>
-              </div>
-            </div>
-
-                        <div class="card">
-              <img src="./image/biology/تالته ثانوي.jpg" alt="">
-              <div class="text-card"> 
- <h3>م\ايمن احمد</h3>
-              <p>الصف الثالث الثانوي</p>
-              </div>
-            </div>
           
           </div>
-            <button>عرض المزيد من الكورسات</button>
+            <button onclick="toggle()" class="more-btn">عرض المزيد من الكورسات</button>
         </div>
       </section>
 
@@ -324,7 +319,33 @@
 
       <section class="skip">
         <h6>رحلة جديدة مع كورسات المهارات من بسطتهالك في مختلف المجالات:</h6>
-        <a href="#">فرصتك جاتلك</a>
+        <a id="btn" href="#">فرصتك جاتلك</a>
+      </section>
+
+
+      <section class="study-section">
+        <div class="container">
+        <div class="image">
+        <img src="./image/CtaStudent.9517b4f12483c0b2c043.png" alt="study-image">
+        </div>
+
+        <div>
+        <div class="icon">
+          <svg class="svg" style="width:7em" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 131 130" fill="none"><g clip-path="url(#clip0_200_1030)"><path d="M51.35 129.759C13.05 128.719 -5.06999 87.8586 1.23001 50.5686C7.55001 13.0286 37.78 0.778607 71.95 12.5986C105.54 24.8086 132.05 48.2586 130.19 74.9586C128.7 101.319 90.05 130.959 51.35 129.749V129.759Z" fill="#CEEBFF"></path><path d="M118.198 42.2328C123.923 33.4449 116.232 18.2886 101.021 8.38014C85.81 -1.52826 68.8385 -2.43662 63.1141 6.35128C57.3897 15.1392 65.0802 30.2955 80.2912 40.2039C95.5023 50.1123 112.474 51.0207 118.198 42.2328Z" fill="#CEEBFF"></path><path d="M64 103.979C87.0358 103.979 105.71 85.3044 105.71 62.2686C105.71 39.2328 87.0358 20.5586 64 20.5586C40.9642 20.5586 22.29 39.2328 22.29 62.2686C22.29 85.3044 40.9642 103.979 64 103.979Z" fill="white"></path><path d="M64 104.858C40.51 104.858 21.41 85.7485 21.41 62.2685C21.41 38.7885 40.52 19.6685 64 19.6685C87.48 19.6685 106.59 38.7785 106.59 62.2685C106.59 85.7585 87.48 104.858 64 104.858ZM64 21.4385C41.49 21.4385 23.18 39.7585 23.18 62.2685C23.18 84.7785 41.49 103.088 64 103.088C86.51 103.088 104.82 84.7785 104.82 62.2685C104.82 39.7585 86.51 21.4385 64 21.4385Z" fill="#3A2382"></path><path d="M75.96 83.5482L63.12 63.2282V37.6982H64.89V62.7182L77.45 82.6082L75.96 83.5482Z" fill="#3A2382"></path><path d="M64 32.1982L57.65 43.1982H70.35L64 32.1982Z" fill="#3A2382"></path><path d="M80.24 87.5384L79.23 74.8784L68.77 82.0784L80.24 87.5384Z" fill="#3A2382"></path><path d="M64 99.1786C43.65 99.1786 27.08 82.6186 27.08 62.2686C27.08 41.9186 43.64 25.3486 64 25.3486C84.36 25.3486 100.92 41.9086 100.92 62.2686C100.92 82.6286 84.36 99.1786 64 99.1786ZM64 27.1186C44.62 27.1186 28.85 42.8886 28.85 62.2686C28.85 81.6486 44.62 97.4086 64 97.4086C83.38 97.4086 99.15 81.6386 99.15 62.2686C99.15 42.8986 83.38 27.1186 64 27.1186Z" fill="#3A2382"></path></g><defs><clipPath id="clip0_200_1030"><rect width="130.28" height="129.48" fill="white" transform="translate(0 0.308594)"></rect></clipPath></defs></svg> 
+
+          <svg  class="svg"  style="width:7em"  xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 124 129" fill="none"><g clip-path="url(#clip0_200_1041)"><path d="M81.13 106.589C49.15 129.769 15.51 111.319 3.59001 80.1886C-8.41999 48.8686 10.83 21.0586 44.36 8.31858C77.59 -3.78142 110.14 -3.25142 120.86 17.3686C131.72 37.5086 113.52 83.2786 81.13 106.579V106.589Z" fill="#CEEBFF"></path><path d="M112.087 123.125C120.196 117.084 123.939 108.387 120.448 103.702C116.957 99.0161 107.553 100.116 99.4439 106.158C91.335 112.2 87.5917 120.896 91.0829 125.582C94.5741 130.267 103.978 129.167 112.087 123.125Z" fill="#CEEBFF"></path><path d="M62.33 93.7488C83.6482 93.7488 100.93 76.467 100.93 55.1488C100.93 33.8306 83.6482 16.5488 62.33 16.5488C41.0118 16.5488 23.73 33.8306 23.73 55.1488C23.73 76.467 41.0118 93.7488 62.33 93.7488Z" fill="white"></path><path d="M62.33 94.7186C40.51 94.7186 22.76 76.9686 22.76 55.1486C22.76 33.3286 40.51 15.5786 62.33 15.5786C84.15 15.5786 101.9 33.3286 101.9 55.1486C101.9 76.9686 84.15 94.7186 62.33 94.7186ZM62.33 17.5086C41.57 17.5086 24.69 34.3886 24.69 55.1486C24.69 75.9086 41.58 92.7886 62.33 92.7886C83.08 92.7886 99.97 75.8986 99.97 55.1486C99.97 34.3986 83.08 17.5086 62.33 17.5086Z" fill="#3A2382"></path><path d="M93.22 79.2686C93.1 79.2686 92.98 79.2486 92.86 79.1986C83.62 75.4686 73.06 73.4986 62.33 73.4986C51.6 73.4986 41.05 75.4686 31.8 79.1986C31.31 79.3986 30.75 79.1586 30.55 78.6686C30.35 78.1786 30.59 77.6086 31.08 77.4186C40.55 73.5986 51.35 71.5786 62.33 71.5786C73.31 71.5786 84.11 73.5986 93.58 77.4186C94.07 77.6186 94.31 78.1786 94.11 78.6686C93.96 79.0386 93.6 79.2686 93.22 79.2686Z" fill="#3A2382"></path><path d="M62.33 38.7189C51.35 38.7189 40.55 36.6989 31.09 32.8789C30.6 32.6789 30.36 32.1189 30.56 31.6289C30.76 31.1389 31.32 30.8989 31.81 31.0989C41.05 34.8289 51.6 36.7989 62.33 36.7989C73.06 36.7989 83.62 34.8289 92.85 31.0989C93.35 30.8989 93.9 31.1389 94.1 31.6289C94.3 32.1189 94.06 32.6889 93.57 32.8789C84.11 36.6989 73.3 38.7189 62.33 38.7189Z" fill="#3A2382"></path><path d="M62.33 94.5586C50.88 94.5586 41.57 76.8486 41.57 55.0686C41.57 33.2886 50.88 15.5786 62.33 15.5786C73.78 15.5786 83.09 33.2886 83.09 55.0686C83.09 76.8486 73.78 94.5586 62.33 94.5586ZM62.33 17.4986C51.94 17.4986 43.5 34.3486 43.5 55.0586C43.5 75.7686 51.95 92.6186 62.33 92.6186C72.71 92.6186 81.16 75.7686 81.16 55.0586C81.16 34.3486 72.71 17.4986 62.33 17.4986Z" fill="#3A2382"></path><path d="M62.33 94.7187C61.8 94.7187 61.37 94.2887 61.37 93.7587V16.3887C61.37 15.8587 61.8 15.4287 62.33 15.4287C62.86 15.4287 63.29 15.8587 63.29 16.3887V93.7487C63.29 94.2787 62.86 94.7087 62.33 94.7087V94.7187Z" fill="#3A2382"></path><path d="M100.94 56.1085H23.73C23.2 56.1085 22.77 55.6785 22.77 55.1485C22.77 54.6185 23.2 54.1885 23.73 54.1885H100.94C101.47 54.1885 101.9 54.6185 101.9 55.1485C101.9 55.6785 101.47 56.1085 100.94 56.1085Z" fill="#3A2382"></path></g><defs><clipPath id="clip0_200_1041"><rect width="124.01" height="128.18" fill="white" transform="translate(0 0.308594)"></rect></clipPath></defs></svg>
+        </div>
+
+        <div class="study-text">
+          <h2>ذاكر في اي وقت</h2>
+          <h3><svg class="svg" xmlns="http://www.w3.org/2000/svg" width="135" height="30" viewBox="0 0 135 30" fill="none"><path d="M0.585786 13.3944C-0.195262 14.1754 -0.195262 15.4418 0.585786 16.2228L13.3137 28.9507C14.0948 29.7318 15.3611 29.7318 16.1421 28.9507C16.9232 28.1697 16.9232 26.9034 16.1421 26.1223L4.82843 14.8086L16.1421 3.49489C16.9232 2.71384 16.9232 1.44751 16.1421 0.666458C15.3611 -0.114591 14.0948 -0.114591 13.3137 0.666458L0.585786 13.3944ZM135 12.8086H2V16.8086H135V12.8086Z" fill="#E7F8FD"></path></svg>في أي<span> مكان</span> </h3>
+          <p>
+            يعني دلوقتي وفرنالك منافذ تقدر تشتري من خلالها الأكواد والكتب في جميع المحافظات خش شوف دلوقتي منافذ البيع القريبه ليك وابسط يعم
+          </p>
+        </div>
+        <a href="#">هبسطهالك</a>
+        </div>
+        </div>
       </section>
     </main>
 
@@ -338,15 +359,34 @@
     <p>الخط الساخن  :<a href="#">165465</a> </p>
   </div>
   <div class="icon">
-                    <i data-aos="fade-up"    data-aos-duration="500" class="fa-brands fa-facebook"></i>
-                    <i data-aos="zoom-in"    data-aos-duration="500" class="fa-brands fa-whatsapp"></i>
-                    <i data-aos="fade-down"  data-aos-duration="500" class="fa-brands fa-instagram"></i>
+                    <i   data-aos-duration="500" class="fa-brands fa-facebook"></i>
+                    <i   data-aos-duration="500" class="fa-brands fa-whatsapp"></i>
+                    <i   data-aos-duration="500" class="fa-brands fa-instagram"></i>
   </div>
   <p>تم صنع هذه المنصة بهدف تهيئة الطالب لـ كامل جوانب الثانوية العامة و ما بعدها</p>
 
 </footer>
 
+
+
+
+
+
+
+
+
+
+
+
+
     <svg  class="telegram-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mingcute" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"></path><path fill="currentColor" d="M19.777 4.43a1.5 1.5 0 0 1 2.062 1.626l-2.268 13.757c-.22 1.327-1.676 2.088-2.893 1.427c-1.018-.553-2.53-1.405-3.89-2.294c-.68-.445-2.763-1.87-2.507-2.884c.22-.867 3.72-4.125 5.72-6.062c.785-.761.427-1.2-.5-.5c-2.302 1.738-5.998 4.381-7.22 5.125c-1.078.656-1.64.768-2.312.656c-1.226-.204-2.363-.52-3.291-.905c-1.254-.52-1.193-2.244-.001-2.746z"></path></g></svg>
+
+    <script>
+  AOS.init();
+</script>
     <script src="main.js"></script>
+
+
+
   </body>
 </html>

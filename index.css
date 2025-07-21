@@ -435,7 +435,19 @@ div.log{
  .h-full{
   width: 80%;
  }
-
+ div.log{
+   display: none;
+    height: 50vh;
+    border-radius: 10px;
+    background-color:rgb(12, 23, 35);
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width:100%;
+    margin: auto;
+    flex-direction: column-reverse;
+}
 
 }
 .appearTeacher{

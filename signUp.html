@@ -50,106 +50,51 @@
     />
   </head>
   <body>
-    <header>
+   <body>
+    <header >
       <nav>
         <div class="nav-logo">
-         <a href="./index.html"> <img src="./image/logo.png" alt="logo-image" /></a>
-          <div class="toggle-container">
-            <input type="checkbox" id="toggle" />
+         <a href="./index.css"> <img src="./image/logo.png" alt="logo-image" /></a>
+          <div  onclick="toggleMode()" class="toggle-container">
+            <input  type="checkbox" id="toggle" />
             <label for="toggle" class="toggle-switch">
-              <svg
-                class="icon"
-                style="z-index: 5"
-                width="20"
-                height="24"
-                fill="none"
-                class="transform transition-transform scale-100 duration-300"
-              >
-                <path
-                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-                <path
-                  d="M12 4v1M18 6l-1 1M20 12h-1M18 18l-1-1M12 19v1M7 17l-1 1M5 12H4M7 7 6 6"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-              <svg
-                class="icon"
-                style="z-index: 5"
-                width="20"
-                height="24"
-                fill="none"
-                class="flex-none -ml-6 transition duration-500 transform text-slate-700 opacity-100 scale-100"
-              >
-                <path
-                  d="M18 15.63c-.977.52-1.945.481-3.13.481A6.981 6.981 0 0 1 7.89 9.13c0-1.185-.04-2.153.481-3.13C6.166 7.174 5 9.347 5 12.018A6.981 6.981 0 0 0 11.982 19c2.67 0 4.844-1.166 6.018-3.37ZM16 5c0 2.08-.96 4-3 4 2.04 0 3 .92 3 3 0-2.08.96-3 3-3-2.04 0-3-1.92-3-4Z"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
+             <svg class="icon" style="z-index: 5; " width="20" height="24" fill="none" class="transform transition-transform scale-100 duration-300"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 4v1M18 6l-1 1M20 12h-1M18 18l-1-1M12 19v1M7 17l-1 1M5 12H4M7 7 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <svg  class="icon"style="z-index: 5; " width="20" height="24" fill="none" class="flex-none -ml-6 transition duration-500 transform text-slate-700 opacity-100 scale-100"><path d="M18 15.63c-.977.52-1.945.481-3.13.481A6.981 6.981 0 0 1 7.89 9.13c0-1.185-.04-2.153.481-3.13C6.166 7.174 5 9.347 5 12.018A6.981 6.981 0 0 0 11.982 19c2.67 0 4.844-1.166 6.018-3.37ZM16 5c0 2.08-.96 4-3 4 2.04 0 3 .92 3 3 0-2.08.96-3 3-3-2.04 0-3-1.92-3-4Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
             </label>
           </div>
         </div>
+
+
+
+
+
+          <div onclick="menuAppear()" class="menu"  >
+              <span class="menu-item item-1"></span>
+              <span class="menu-item item-2"></span>
+              <span class="menu-item item-3"></span>
+            </div>
         <div class="log">
-          <i class="bx bx-search"></i>
+          
+            
+            <i class="bx bx-search"></i>
+       
 
-          <a href="./login.html" class="login">
-            <span class="span">
-              دخولك
-              <span class="white-text">
-                سجل
-                <svg
-                  style="margin: 0 5px; color: gold"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  class="iconify iconify--ic"
-                  width="1.5em"
-                  height="2em"
-                  preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1L3 8c1.86.5 4 .83 6 1v13h2v-6h2v6h2V9c2-.17 4.14-.5 6-1zM12 6c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2"
-                  ></path>
-                </svg>
-              </span>
-            </span>
-          </a>
+          
+          
+<a href="./login.html" class="login">
+  <span class="span">
+    دخولك  <span class="white-text">  سجل 
+      <svg style="margin:0 5px; color:gold" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="1.5em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1L3 8c1.86.5 4 .83 6 1v13h2v-6h2v6h2V9c2-.17 4.14-.5 6-1zM12 6c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2"></path>
+      </svg>
+    </span>
+  </span>
+</a>
 
-          <a href="./signUp.html" class="signup"
-            >!اعمل جساب جديد
-            <svg
-              style="margin: 0 5px"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              aria-hidden="true"
-              role="img"
-              class="iconify iconify--material-symbols"
-              width="1.5em"
-              height="2em"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M5 19V5zv-.025zm0 2q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v7q0 .425-.288.713T20 13t-.712-.288T19 12V5H5v14h7q.425 0 .713.288T13 20t-.288.713T12 21zm14.175-1H16q-.425 0-.712-.288T15 19t.288-.712T16 18h3.175l-.9-.9Q18 16.825 18 16.413t.3-.713q.275-.275.7-.275t.7.275l2.6 2.6q.3.3.3.7t-.3.7l-2.6 2.6q-.275.275-.687.288T18.3 22.3q-.275-.275-.275-.7t.275-.7zM11 13v3q0 .425.288.713T12 17t.713-.288T13 16v-3h3q.425 0 .713-.288T17 12t-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7t-.712.288T11 8v3H8q-.425 0-.712.288T7 12t.288.713T8 13z"
-              ></path></svg
-          ></a>
+          <a href="./signUp.html" class="signup">!اعمل جساب جديد <svg style="margin:0 5px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--material-symbols" width="1.5em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M5 19V5zv-.025zm0 2q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v7q0 .425-.288.713T20 13t-.712-.288T19 12V5H5v14h7q.425 0 .713.288T13 20t-.288.713T12 21zm14.175-1H16q-.425 0-.712-.288T15 19t.288-.712T16 18h3.175l-.9-.9Q18 16.825 18 16.413t.3-.713q.275-.275.7-.275t.7.275l2.6 2.6q.3.3.3.7t-.3.7l-2.6 2.6q-.275.275-.687.288T18.3 22.3q-.275-.275-.275-.7t.275-.7zM11 13v3q0 .425.288.713T12 17t.713-.288T13 16v-3h3q.425 0 .713-.288T17 12t-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7t-.712.288T11 8v3H8q-.425 0-.712.288T7 12t.288.713T8 13z"></path></svg></a>
+         
         </div>
+        
       </nav>
     </header>
 
@@ -661,5 +606,8 @@
         ></path>
       </g>
     </svg>
+
+
+     <script src="./main.js"></script>
   </body>
 </html>

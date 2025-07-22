@@ -143,6 +143,11 @@ let subject=document.querySelector(".all-subject")
 let menu=document.querySelector(".menu");
 let log=document.querySelector(".log")
 
+function toggleTheme() {
+  document.body.classList.toggle('light');
+  console.log(5)
+}
+
 console.log((log))
 console.log((menu))
 

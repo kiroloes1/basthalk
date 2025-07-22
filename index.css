@@ -20,8 +20,8 @@ body.light {
   --bg-dark: #ffffff;
   --bg-light: #000000;
 
-  --toggle-circle: #333;
-  --icon-color: #444;
+  --toggle-circle: #000000;
+  --icon-color: #dcdcdc;
   
   
   
@@ -1122,7 +1122,7 @@ width: 50vw;
 footer .tel{
  
  background-color: var(--bg-dark);
- color: white;
+ color: var(--bg-light);
  padding: 10px 60px;
  margin-bottom: 2em;
  font-size: 1.5em;
@@ -1139,7 +1139,7 @@ footer .tel{
   background-color:rgb(122, 169, 177);
   padding: 8px 40px;
  border-radius: 10px;
- color: #f4f5f7;
+ color: var(--bg-light);
  font-weight: 700;
 }
 footer  .icon i{
